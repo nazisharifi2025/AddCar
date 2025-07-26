@@ -14,7 +14,7 @@ $natija =$conniction-> query($dastor)
 <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
 <body>
     <a href="insertT.php">ADD USER</a>
-    <div class="h-screen  w-full p-6 flex justify-between flex-wrap overflow-y-scroll">
+    <div class="h-screen  w-full p-6 flex gap-6 justify-between flex-wrap overflow-y-scroll">
     <?php  if($natija->num_rows>0){
         while($rows=$natija->fetch_assoc()){
         

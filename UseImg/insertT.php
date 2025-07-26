@@ -25,20 +25,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css">
 </head>
-<body class="h-screen w-full flex justify-center items-center">
-    <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="post" enctype = "multipart/form-data" class="shadow-md shadow-gray-800 flex flex-col justify-between h-[70%] w-[50%]">
-        <label for="">ID</label>
-        <input type="number" name="id">
+<body class="h-screen w-full flex justify-center flex-col gap-12  items-center">
+    <h1 class="font-bold text-4xl">ADD NEW CAR</h1>
+    <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="post" enctype = "multipart/form-data" class="shadow-md rounded-2xl p-7 shadow-gray-800 flex flex-col justify-between h-[70%] w-[50%]">
+        <label for="" class="font-bold ">ID:</label>
+        <input type="number" name="id" class="shadow-md shadow-gray-600 py-2 rounded-[5px] outline-0">
         <br>
         <br>
-        <label for="">Name</label>
-        <input type="text" name="name">
+        <label for="" class="font-bold ">Name:</label>
+        <input type="text" name="name" class="shadow-md shadow-gray-600 py-2 rounded-[5px] outline-0">
         <br>
         <br>
-        <input type="file" name = "image">
+        <label for="" class="font-bold ">File:</label>
+        <input type="file" name = "image" class="shadow-md shadow-gray-600 py-2 rounded-[5px] outline-0">
         <br>
         <br>
-        <button name="submit">Submit</button>
+        <button name="submit" class="py-2 px-4 bg-gray-300 shadow-md shadow-gray-600  rounded-[5px] hover:bg-white hover:shadow-xl transition-all duration-300 hover:shadow-gray-800 hover:">Submit</button>
 
 </form>
 </body>
