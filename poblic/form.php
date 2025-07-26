@@ -33,5 +33,14 @@
             <button class="py-2 px-3 w-[40%] bg-gray-300 shadow-md shadow-gray-800 rounded-xl font-bold mx-auto hover:bg-white hover:shadow-xl transition-all delay-300 ">SUBMIT</button>
         </form>
     </div>
+    <?php 
+    if($_SERVER["REQUEST METHOD"] === "POST"){
+        $ID = $_POST["id"];
+        $name = $_POST["name"];
+        $imgUrl = $_POST["imgUrl"];
+        $model = $_POST["model"];
+        $price = $_POST["price"];
+    }
+    ?>
 </body>
 </html>
