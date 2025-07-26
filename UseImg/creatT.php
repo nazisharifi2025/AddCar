@@ -1,8 +1,12 @@
 <?php
 include "connect.php";
 
-$CreatTable = "CREATE TABLE (id INT PRIMARY KEY,name VARCHAR(50).imgUrl VARCHAR(120) )";
+$CreatTable = "CREATE TABLE user_file(id INT PRIMARY KEY,name VARCHAR(50),imgUrl VARCHAR(120) )";
 
-$connect->query($CreatTable);
-
+// $conniction ->query ($CreatTable);
+if ($conniction ->query($CreatTable) === TRUE) {
+    echo "Table created successfully.";
+} else {
+    echo "Error creating table: " . $connect->error;
+}
 ?>
