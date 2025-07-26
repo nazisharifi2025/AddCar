@@ -1,7 +1,15 @@
 <?php
 include "connect.php";
 $dastor = "SELECT * FROM user_file";
-$natija =$conniction-> query($dastor)
+$natija =$conniction-> query($dastor);
+if(isset($_GET["messege"])){
+    if($_GET["messege"] === "Success"){
+        echo "<h1 class='bg-green-500 py-6 text-center font-bold px-4 absolute right-0 top-12 w-[120px] ' id='id'>One item deleted</h1>";
+    }
+    else{
+        echo "<h1>The item could not be deleted</h1>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +17,7 @@ $natija =$conniction-> query($dastor)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="../src/output.css">
 </head>
 <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
@@ -25,7 +34,7 @@ $natija =$conniction-> query($dastor)
             <div class="flex justify-center gap-5">
                 <button class="py-2 px-4 bg-red-600 rounded-2xl">
                   <a href="Delete.php?id=<?php echo $rows['id']; ?>">Delete</a>
-                </button>
+                  </button>
             <!-- <button class="py-2 px-4 bg-red-600 rounded-2xl"><a >Delete</a></button> -->
             <button class="py-2 px-4 bg-green-500 rounded-2xl">Updeat</button>
         </div>
