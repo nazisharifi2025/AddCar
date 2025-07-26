@@ -9,7 +9,13 @@ if(isset($_GET['id'])){
         $id = $_POST['id'];
         $name = $_POST['name'];
         $imgUrl = $_POST['imgUrl'];
-        $dastor = 
+        $dastor = "UPDATE user_file SET id='$id',name = '$name',imgUrl='$imgUrl' WHERE id='$id'";
+        if($conniction->query($dastor)){
+            header("location:read.php");
+        }else{
+            header("location:read.php");
+        };
+
     }
 } 
 ?>
