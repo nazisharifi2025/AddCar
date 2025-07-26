@@ -30,6 +30,10 @@
                 <label for=""  class="font-bold">PRICE:</label>
                 <input type="number" name="price" class="py-2 w-full border rounded-xl outline-0">
             </div>
+            <div>
+                <label for=""  class="font-bold">STATE:</label>
+                <input type="number" name="state" class="py-2 w-full border rounded-xl outline-0">
+            </div>
             <button class="py-2 px-3 w-[40%] bg-gray-300 shadow-md shadow-gray-800 rounded-xl font-bold mx-auto hover:bg-white hover:shadow-xl transition-all delay-300 ">SUBMIT</button>
         </form>
     </div>
@@ -40,6 +44,7 @@
         $imgUrl = $_POST["imgUrl"];
         $model = $_POST["model"];
         $price = $_POST["price"];
+        $Dastor = "INSERT INTO CARID (id ,name,brand,model,price"
     }
     ?>
 </body>
