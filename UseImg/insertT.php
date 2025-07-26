@@ -9,7 +9,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $dastor = "INSERT INTO user_file(id,name,imgUrl) VALUES('$id','$name','$file_name')";
     $conniction->query($dastor);
 
-    Move_uploaded_file($tampname,$folder);
+   if( Move_uploaded_file($tampname,$folder)){
+    header("location:read.php");
+   }else{
+    header("location:read.php");
+   };
 }
 
 ?>
@@ -19,9 +23,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
 </head>
-<body>
-    <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="post" enctype = "multipart/form-data">
+<body class="h-screen w-full flex justify-center items-center">
+    <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="post" enctype = "multipart/form-data" class="shadow-md shadow-gray-800 flex flex-col justify-between h-[70%] w-[50%]">
         <label for="">ID</label>
         <input type="number" name="id">
         <br>
