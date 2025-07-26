@@ -44,7 +44,8 @@
         $imgUrl = $_POST["imgUrl"];
         $model = $_POST["model"];
         $price = $_POST["price"];
-        $Dastor = "INSERT INTO CARID (id ,name,brand,model,price"
+        $state = $_POST["state"];
+        $Dastor = "INSERT INTO CARID (id ,name,brand,price,stat" values('$id,$name,model,')
     }
     ?>
 </body>
