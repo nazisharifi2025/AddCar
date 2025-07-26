@@ -5,8 +5,11 @@ if($_SERVER["REQUEST_METHOD"] === "post"){
     $name = $_POST["name"];
     $file_name = $_FILES['image']['name'];
     $tampname = $_FILES['image']['tmp_name'];
-    $dastor = "INSERT INTO user_file(id,name,imgUrl) VALUES('$id','$name','$file_name')";
-    $conniction->query($dastor)
+    $folder = "image". $file_name;
+    $dastor = "INSERT INTO user_file(id,name,imgUrl) VALUES('$id','$name','$file_name'))";
+    $conniction->query($dastor);
+
+    Move_uploaded_file($tampname,$folder)
 }
 
 ?>
