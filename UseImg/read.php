@@ -36,7 +36,9 @@ if(isset($_GET["messege"])){
                   <a href="Delete.php?id=<?php echo $rows['id']; ?>">Delete</a>
                   </button>
             <!-- <button class="py-2 px-4 bg-red-600 rounded-2xl"><a >Delete</a></button> -->
-            <button class="py-2 px-4 bg-green-500 rounded-2xl">Updeat</button>
+            <button class="py-2 px-4 bg-green-500 rounded-2xl">
+                <a href="update.php?id=<?php echo $rows['id']; ?>">Update</a>
+            </button>
         </div>
         </div>
         <?php  }} ?>
