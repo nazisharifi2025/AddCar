@@ -1,6 +1,13 @@
 <?php
 include "connect.php";
-
+if($_SERVER["REQUEST_METHOD"] === "post"){
+    $id = $_POST["id"];
+    $name = $_POST["name"];
+    $file_name = $_FILES['image']['name'];
+    $tampname = $_FILES['image']['tmp_name'];
+    $dastor = "INSERT INTO user_file(id,name,imgUrl) VALUES('$id','$name','$file_name')";
+    $conniction->query($dastor)
+}
 
 ?>
 <!DOCTYPE html>
@@ -11,11 +18,12 @@ include "connect.php";
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="post">
+        <label for="">Name</label>
         <input type="text" name="name">
         <br>
         <br>
-        <input type="file">
+        <input type="file" name = "image">
         <br>
         <br>
         <button name="submit">Submit</button>
