@@ -1,3 +1,19 @@
+<?php 
+include "connect.php";
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+
+    $dastor = "DELETE FROM user_file WHERE id =".$id ;
+    if($conniction->query($dastor)===true){
+        header("location:read.php?messege=Success");
+    }else{
+        header("location:insert.php?messege=fail");
+    };
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

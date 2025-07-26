@@ -23,7 +23,10 @@ $natija =$conniction-> query($dastor)
             <img src="./image/<?php echo $rows['imgUrl'] ?>" class="rounded-xl h-[220px] w-[220px] " alt="">
             <h1 class="font-bold text-2xl"><?php echo $rows['name'] ?></h1>
             <div class="flex justify-center gap-5">
-            <button class="py-2 px-4 bg-red-600 rounded-2xl">Delete</button>
+                <button class="py-2 px-4 bg-red-600 rounded-2xl">
+                  <a href="Delete.php?id=<?php echo $rows['id']; ?>">Delete</a>
+                </button>
+            <!-- <button class="py-2 px-4 bg-red-600 rounded-2xl"><a >Delete</a></button> -->
             <button class="py-2 px-4 bg-green-500 rounded-2xl">Updeat</button>
         </div>
         </div>
