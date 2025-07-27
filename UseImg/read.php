@@ -22,8 +22,8 @@ if(isset($_GET["messege"])){
 </head>
 <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
 <body>
-    <a href="insertT.php" class="font-bold text-3xl text-center line-clamp-4 hover:shadow-md hover:shadow-gray-400 w-[20%] hover:border-b transition-all duration-200 mx-auto">ADD USER</a>
-    <div class="h-screen  w-full p-6 flex gap-6 justify-between flex-wrap overflow-y-scroll">
+    <a href="insertT.php" class="font-bold text-3xl text-center line-clamp-4 hover:shadow-md hover:shadow-gray-400 w-[20%] hover:border-b transition-all duration-200 mx-auto">ADD NEW CAR</a>
+    <div class="h-screen  w-full p-6 flex gap-6 justify-center flex-wrap overflow-y-scroll">
     <?php  if($natija->num_rows>0){
         while($rows=$natija->fetch_assoc()){
         
