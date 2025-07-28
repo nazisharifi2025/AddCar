@@ -11,7 +11,7 @@
         <img src="./image/car6.jpg" alt="" class=" h-[70%] w-[80%] rounded-2xl">
         <h1 class="font-bold text-2xl text-center">Felder</h1>
     </div>
-    <div class="h-[80%] w-[80%] shadow-md shadow-gray-900 flex-col gap-12 bg-gray-100 flex justify-center">
+    <div class="h-[80%] w-[80%] shadow-md shadow-gray-900 flex-col gap-12 bg-gray-100 flex justify-center  items-center rounded-2xl ">
         <!-- <img src="./image/car6.jpg" alt="" class=" h-[70%] w-[80%] rounded-2xl">
         <h1 class="font-bold text-2xl text-center">Felder</h1> -->
     </div>
