@@ -22,21 +22,21 @@ if(isset($_GET["messege"])){
 </head>
 <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
 <body>
-    <a href="insertT.php" class="font-bold text-3xl text-center line-clamp-4 hover:shadow-md hover:shadow-gray-400 w-[20%] hover:border-b transition-all duration-200 mx-auto">ADD NEW CAR</a>
+    <a href="insertT.php" class="font-bold text-3xl text-center line-clamp-4 hover:shadow-md hover:shadow-gray-400 w-[20%] hover:border-b transition-all duration-200 mx-auto">MANAGE CARS</a>
     <div class="h-screen  w-full p-6 flex gap-6 justify-center flex-wrap overflow-y-scroll">
     <?php  if($natija->num_rows>0){
         while($rows=$natija->fetch_assoc()){
         
         ?>
-    <div class="h-[350px] w-[250px] rounded-2xl shadow-md shadow-gray-700 flex-col p-5 flex justify-center items-center">
+    <div class="h-[360px] w-[280px] rounded-xl shadow-md shadow-gray-700 flex-col p-5 flex justify-center items-center">
             <img src="./image/<?php echo $rows['imgUrl'] ?>" class="rounded-xl h-[220px] w-[220px] " alt="">
             <h1 class="font-bold text-2xl"><?php echo $rows['name'] ?></h1>
             <div class="flex justify-center gap-5">
-                <button class="py-2 px-4 bg-red-600 rounded-2xl">
+                <button class="py-2 px-4 text-white bg-red-600 font-bold rounded-md">
                   <a href="Delete.php?id=<?php echo $rows['id']; ?>">Delete</a>
                   </button>
             <!-- <button class="py-2 px-4 bg-red-600 rounded-2xl"><a >Delete</a></button> -->
-            <button class="py-2 px-4 bg-green-500 rounded-2xl">
+            <button class="py-2 px-4 text-white font-bold bg-green-500 rounded-md">
                 <a href="update.php?id=<?php echo $rows['id']; ?>">Update</a>
             </button>
         </div>
